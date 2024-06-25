@@ -38,6 +38,9 @@ FROM students
 LIMIT 10;
 ```
 
+![image](https://github.com/NguyenMav/DataCamp_SQL_Beginner_Mental_Health/assets/149219810/740fc75f-7902-46a6-ae13-488b9d9a8afa)
+
+
 Return a table with nine rows and five columns. The five columns should be aliased as: stay, count_int, average_phq, average_scs, and average_as, in that order. The average columns should contain the average of the todep (PHQ-9 test), tosc (SCS test), and toas (ASISS test) columns for each length of stay, rounded to two decimal places. The count_int column should be the number of international students for each length of stay. Sort the results by the length of stay in descending order.
 
 Here's the SQL code according to the requirements of this project:
@@ -50,6 +53,19 @@ GROUP BY stay
 ORDER BY stay DESC
 LIMIT 9;
 ```
+
+| stay | count_int | average_phq | average_scs | average_as |
+|------|-----------|-------------|-------------|-------------|
+| 10   | 1         | 13          | 32          | 50          |
+| 8    | 1         | 10          | 44          | 65          |
+| 7    | 1         | 4           | 48          | 45          |
+| 6    | 3         | 6           | 38          | 58.67       |
+| 5    | 1         | 0           | 34          | 91          |
+| 4    | 14        | 8.57        | 33.93       | 87.71       |
+| 3    | 46        | 9.09        | 37.13       | 78          |
+| 2    | 39        | 8.28        | 37.08       | 77.67       |
+| 1    | 95        | 7.48        | 38.11       | 72.8        |
+
 
 ### Thought Process
 1. Write out SELECT, FROM first.
